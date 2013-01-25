@@ -8,9 +8,6 @@ package Dancer::SessionFactory::Sereal;
 
 use Moo;
 use Dancer::Core::Types;
-use Carp;
-use Fcntl ':flock';
-use Dancer::FileUtils qw(path set_file_mode);
 use Sereal::Encoder;
 use Sereal::Decoder;
 

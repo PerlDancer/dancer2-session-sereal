@@ -40,11 +40,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Carp" : "0",
             "Dancer::Core::Role::SessionFactory::File" : "0",
             "Dancer::Core::Types" : "0",
-            "Dancer::FileUtils" : "0",
-            "Fcntl" : "0",
             "Moo" : "0",
             "Sereal::Decoder" : "0",
             "Sereal::Encoder" : "0",

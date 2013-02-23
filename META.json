@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Dancer-SessionFactory-Sereal",
+   "name" : "Dancer2-Session-Sereal",
    "no_index" : {
       "directory" : [
          "t",
@@ -40,8 +40,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Dancer::Core::Role::SessionFactory::File" : "0",
-            "Dancer::Core::Types" : "0",
+            "Dancer2::Core::Role::SessionFactory::File" : "0",
+            "Dancer2::Core::Types" : "0",
             "Moo" : "0",
             "Sereal::Decoder" : "0",
             "Sereal::Encoder" : "0",
@@ -52,12 +52,15 @@
       },
       "test" : {
          "requires" : {
-            "Dancer" : "0",
+            "Dancer2" : "0",
+            "ExtUtils::MakeMaker" : "0",
             "File::Find" : "0",
             "File::Spec" : "0",
+            "File::Spec::Functions" : "0",
             "File::Temp" : "0.22",
             "HTTP::Date" : "0",
             "LWP::UserAgent" : "0",
+            "List::Util" : "0",
             "Test::More" : "0",
             "Test::TCP" : "1.13",
             "YAML" : "0"
@@ -65,21 +68,21 @@
       }
    },
    "provides" : {
-      "Dancer::SessionFactory::Sereal" : {
-         "file" : "lib/Dancer/SessionFactory/Sereal.pm",
+      "Dancer2::Session::Sereal" : {
+         "file" : "lib/Dancer2/Session/Sereal.pm",
          "version" : "0.001"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/dagolden/dancer-sessionfactory-sereal/issues"
+         "web" : "https://github.com/dagolden/dancer2-session-sereal/issues"
       },
-      "homepage" : "https://metacpan.org/release/Dancer-SessionFactory-Sereal",
+      "homepage" : "https://metacpan.org/release/Dancer2-Session-Sereal",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/dagolden/dancer-sessionfactory-sereal.git",
-         "web" : "https://github.com/dagolden/dancer-sessionfactory-sereal"
+         "url" : "git://github.com/dagolden/dancer2-session-sereal.git",
+         "web" : "https://github.com/dagolden/dancer2-session-sereal"
       }
    },
    "version" : "0.001"

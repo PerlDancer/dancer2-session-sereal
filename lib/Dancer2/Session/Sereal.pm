@@ -2,12 +2,12 @@ use 5.008001;
 use strict;
 use warnings;
 
-package Dancer::SessionFactory::Sereal;
+package Dancer2::Session::Sereal;
 # ABSTRACT: Dancer 2 session storage in files with Sereal
 # VERSION
 
 use Moo;
-use Dancer::Core::Types;
+use Dancer2::Core::Types;
 use Sereal::Encoder;
 use Sereal::Decoder;
 
@@ -57,7 +57,7 @@ sub _build__decoder {
 # Role composition
 #--------------------------------------------------------------------------#
 
-with 'Dancer::Core::Role::SessionFactory::File';
+with 'Dancer2::Core::Role::SessionFactory::File';
 
 sub _freeze_to_handle {
   my ($self, $fh, $data) = @_;
@@ -87,7 +87,7 @@ CRON job.
 =head1 CONFIGURATION
 
 The setting B<session> should be set to C<Sereal> in order to use this session
-engine in a Dancer application.
+engine in a Dancer2 application.
 
 Files will be stored to the value of the setting C<session_dir>, whose default
 value is C<appdir/sessions>.
@@ -101,11 +101,6 @@ files in /tmp/dancer-sessions
       session:
         Sereal:
           session_dir: "/tmp/dancer-sessions"
-
-
-=head1 SEE ALSO
-
-See L<Dancer::Session> for details about session usage in route handlers.
 
 =cut
 

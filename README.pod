@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Dancer::SessionFactory::Sereal - Dancer 2 session storage in files with Sereal
+Dancer2::Session::Sereal - Dancer 2 session storage in files with Sereal
 
 =head1 VERSION
 
@@ -20,7 +20,7 @@ CRON job.
 =head1 CONFIGURATION
 
 The setting B<session> should be set to C<Sereal> in order to use this session
-engine in a Dancer application.
+engine in a Dancer2 application.
 
 Files will be stored to the value of the setting C<session_dir>, whose default
 value is C<appdir/sessions>.
@@ -35,10 +35,6 @@ files in /tmp/dancer-sessions
         Sereal:
           session_dir: "/tmp/dancer-sessions"
 
-=head1 SEE ALSO
-
-See L<Dancer::Session> for details about session usage in route handlers.
-
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders metacpan
 
 =head1 SUPPORT
@@ -46,7 +42,7 @@ See L<Dancer::Session> for details about session usage in route handlers.
 =head2 Bugs / Feature Requests
 
 Please report any bugs or feature requests through the issue tracker
-at L<https://github.com/dagolden/dancer-sessionfactory-sereal/issues>.
+at L<https://github.com/dagolden/dancer2-session-sereal/issues>.
 You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
@@ -54,9 +50,9 @@ You will be notified automatically of any progress on your issue.
 This is open source software.  The code repository is available for
 public review and contribution under the terms of the license.
 
-L<https://github.com/dagolden/dancer-sessionfactory-sereal>
+L<https://github.com/dagolden/dancer2-session-sereal>
 
-  git clone git://github.com/dagolden/dancer-sessionfactory-sereal.git
+  git clone git://github.com/dagolden/dancer2-session-sereal.git
 
 =head1 AUTHOR
 

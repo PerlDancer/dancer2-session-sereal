@@ -4,7 +4,7 @@ use warnings;
 
 package Dancer2::Session::Sereal;
 # ABSTRACT: Dancer 2 session storage in files with Sereal
-# VERSION
+our $VERSION = '0.001'; # VERSION
 
 use Moo;
 use Dancer2::Core::Types;
@@ -73,7 +73,16 @@ sub _thaw_from_handle {
 }
 
 1;
-__END__
+
+=pod
+
+=head1 NAME
+
+Dancer2::Session::Sereal - Dancer 2 session storage in files with Sereal
+
+=head1 VERSION
+
+version 0.001
 
 =head1 DESCRIPTION
 
@@ -102,6 +111,40 @@ files in /tmp/dancer-sessions
         Sereal:
           session_dir: "/tmp/dancer-sessions"
 
+=for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders metacpan
+
+=head1 SUPPORT
+
+=head2 Bugs / Feature Requests
+
+Please report any bugs or feature requests through the issue tracker
+at L<https://github.com/dagolden/dancer2-session-sereal/issues>.
+You will be notified automatically of any progress on your issue.
+
+=head2 Source Code
+
+This is open source software.  The code repository is available for
+public review and contribution under the terms of the license.
+
+L<https://github.com/dagolden/dancer2-session-sereal>
+
+  git clone git://github.com/dagolden/dancer2-session-sereal.git
+
+=head1 AUTHOR
+
+David Golden <dagolden@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by David Golden.
+
+This is free software, licensed under:
+
+  The Apache License, Version 2.0, January 2004
+
 =cut
+
+__END__
+
 
 # vim: ts=4 sts=4 sw=4 et:

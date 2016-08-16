@@ -1,11 +1,11 @@
 Revision history for Dancer2-Session-Sereal
 
-{{$NEXT}}
+0.002 2016-08-16
+  - Convert tests from Test::TCP to Plack::Test
+  - Minimum Dancer2 release is now 0.150000
 
-    - Convert tests from Test::TCP to Plack::Test
-    - Minimum Dancer2 release is now 0.150000
+  [ STATISTICS ]
+    - code churn: 3 files changed, 232 insertions(+), 167 deletions(-)
 
-0.001     2013-02-22 23:40:14 America/New_York
-
-    - First release
-
+0.001 2013-02-22T23:40:14Z America/New_York
+  - First release

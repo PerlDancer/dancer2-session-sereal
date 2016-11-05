@@ -21,6 +21,17 @@ has _suffix => (
     default => sub { ".srl" },
 );
 
+has encoder_args => (
+    is => 'ro',
+    isa => HashRef,
+    default => sub{
+        +{
+            snappy         => 1,
+            croak_on_bless => 1,
+        }
+    }
+);
+
 has _encoder => (
     is      => 'lazy',
     isa     => InstanceOf ['Sereal::Encoder'],
@@ -29,13 +40,19 @@ has _encoder => (
 
 sub _build__encoder {
     my ($self) = @_;
-    return Sereal::Encoder->new(
-        {
-            snappy         => 1,
-            croak_on_bless => 1,
-        }
-    );
+    return Sereal::Encoder->new( $self->encoder_args );
 }
+
+has decoder_args => (
+    is => 'ro',
+    isa => HashRef,
+    default => sub{
+        +{
+            refuse_objects => 1,
+            validate_utf8  => 1,
+        }
+    }
+);
 
 has _decoder => (
     is      => 'lazy',
@@ -45,12 +62,7 @@ has _decoder => (
 
 sub _build__decoder {
     my ($self) = @_;
-    return Sereal::Decoder->new(
-        {
-            refuse_objects => 1,
-            validate_utf8  => 1,
-        }
-    );
+    return Sereal::Decoder->new( $self->decoder_args );
 }
 
 #--------------------------------------------------------------------------#
@@ -92,6 +104,10 @@ engine in a Dancer2 application.
 Files will be stored to the value of the setting C<session_dir>, whose default
 value is C<appdir/sessions>.
 
+Arguments for the L<Sereal::Encoder> and L<Sereal::Decoder> objects can be 
+given via the C<encoder_args> and C<decoder_args>. If not provided, they default to
+C<< snappy => 1, croak_on_bless =>1 >> and C<< refuse_objects => 1, validate_utf8 => 1 >>, respectively.
+
 Here is an example configuration that use this session engine and stores session
 files in /tmp/dancer-sessions
 
@@ -101,6 +117,13 @@ files in /tmp/dancer-sessions
       session:
         Sereal:
           session_dir: "/tmp/dancer-sessions"
+          encoder_args:
+            snappy:         1
+            croak_on_bless: 1
+          decoder_args:
+            refuse_objects: 1
+            validate_utf8:  1
+
 
 =cut
 

@@ -3,9 +3,10 @@ use strict;
 use warnings;
 
 package Dancer2::Session::Sereal;
+our $AUTHORITY = 'cpan:YANICK';
 # ABSTRACT: Dancer 2 session storage in files with Sereal
 # VERSION
-
+$Dancer2::Session::Sereal::VERSION = '0.003';
 use Moo;
 use Dancer2::Core::Types;
 use Sereal::Encoder;
@@ -85,7 +86,18 @@ sub _thaw_from_handle {
 }
 
 1;
-__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Dancer2::Session::Sereal - Dancer 2 session storage in files with Sereal
+
+=head1 VERSION
+
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -124,7 +136,21 @@ files in /tmp/dancer-sessions
             refuse_objects: 1
             validate_utf8:  1
 
+=head1 AUTHOR
+
+David Golden <dagolden@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by David Golden.
+
+This is free software, licensed under:
+
+  The Apache License, Version 2.0, January 2004
 
 =cut
+
+__END__
+
 
 # vim: ts=4 sts=4 sw=4 et:

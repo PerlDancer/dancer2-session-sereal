@@ -6,6 +6,7 @@ Revision history for Dancer2-Session-Sereal
   [ BUG FIXES ]
 
   [ DOCUMENTATION ]
+    - Document 'encoder_args' and 'decoder_args' so tests pass.
 
   [ ENHANCEMENTS ]
 

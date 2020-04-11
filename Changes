@@ -1,6 +1,8 @@
 Revision history for Dancer2-Session-Sereal
 
 {{$NEXT}}
+
+0.004     2020-04-10 20:29:34-04:00 America/New_York
   [ API CHANGES ]
 
   [ BUG FIXES ]

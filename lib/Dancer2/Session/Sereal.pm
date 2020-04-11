@@ -11,6 +11,8 @@ use Dancer2::Core::Types;
 use Sereal::Encoder;
 use Sereal::Decoder;
 
+our $VERSION = '0.004';
+
 #--------------------------------------------------------------------------#
 # Attributes
 #--------------------------------------------------------------------------#
@@ -20,6 +22,13 @@ has _suffix => (
     isa     => Str,
     default => sub { ".srl" },
 );
+
+=head2 encoder_args
+
+Arguments to be passed to L<Sereal::Encoder>. If these are not provided in
+the session configuration, sensible defaults are used.
+
+=cut
 
 has encoder_args => (
     is => 'ro',
@@ -42,6 +51,13 @@ sub _build__encoder {
     my ($self) = @_;
     return Sereal::Encoder->new( $self->encoder_args );
 }
+
+=head2 decoder_args
+
+Arguments to be passed to L<Sereal::Decoder>. If these are not provided in
+the session configuration, sensible defaults are used.
+
+=cut
 
 has decoder_args => (
     is => 'ro',

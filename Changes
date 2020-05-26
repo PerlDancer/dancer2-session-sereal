@@ -1,18 +1,26 @@
 Revision history for Dancer2-Session-Sereal
 
 {{$NEXT}}
+    - Issues getting 0.004 to release. Bump to 0.005 (cromedome)
+    
+0.004 (unreleased)
   [ API CHANGES ]
+    - None
 
   [ BUG FIXES ]
+    - None
 
   [ DOCUMENTATION ]
     - Document 'encoder_args' and 'decoder_args' so tests pass.
 
   [ ENHANCEMENTS ]
+    - None
 
   [ NEW FEATURES ]
+    - None
 
   [ STATISTICS ]
+    - N/A
 
 0.003 2016-11-05
   [ NEW FEATURES ]

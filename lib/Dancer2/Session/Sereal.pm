@@ -11,7 +11,7 @@ use Dancer2::Core::Types;
 use Sereal::Encoder;
 use Sereal::Decoder;
 
-our $VERSION = '0.005';
+our $VERSION = '0.004';
 
 #--------------------------------------------------------------------------#
 # Attributes

@@ -1,6 +1,8 @@
 Revision history for Dancer2-Session-Sereal
 
 {{$NEXT}}
+
+0.005     2020-05-26 18:47:34-04:00 America/New_York
     - Issues getting 0.004 to release. Bump to 0.005 (cromedome)
     
 0.004 (unreleased)
